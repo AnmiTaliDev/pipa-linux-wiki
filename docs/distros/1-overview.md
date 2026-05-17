@@ -1,6 +1,6 @@
 # Overview
 
-This is nonexhaustive list of available linux distros with varying degrees of maintenance.
+This is a nonexhaustive list of available linux distros with varying degrees of maintenance.
 
 ## Actively maintained
 ### Fedora based Distros
@@ -20,6 +20,7 @@ This is nonexhaustive list of available linux distros with varying degrees of ma
 
 ## Stale
 - [Void Linux by adomerle](https://github.com/pipa-mainline/void-pipa)
+- [Regular Fedora by timoxa0](https://github.com/timoxa0/pipa-fedora-builder)
   
 
 ## Usability Matrix
@@ -27,7 +28,7 @@ This is nonexhaustive list of available linux distros with varying degrees of ma
 
 |Distro|Noob-friendlyness|Package availability|Stability|Prebuilt Images|
 |------------|------------|------------|------------|------------|
-|Pocketblue|5/5|4/5|5/5|✅|
+|Pocketblue|5/5|5/5|5/5|✅|
 |Fedora|4/5|5/5|4/5|✅|
 |ARMtix|2/5|5/5|?|✅|
 |Alarm|3/5|3/5|?|✅|

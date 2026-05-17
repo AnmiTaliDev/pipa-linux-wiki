@@ -4,7 +4,9 @@ There are at least 3 different 'close-to'-mainline kernels available for pipa.
 
 ## Kernel developers
 The talented People involved in initial kernel upbringing, maintenance, porting ...  
-List credit to: TheMojoMan @[xiaomi-pipa repo](https://github.com/TheMojoMan/xiaomi-pipa), in no particular order or degree of involvement.
+List credit to: TheMojoMan @[xiaomi-pipa repo](https://github.com/TheMojoMan/xiaomi-pipa).  
+In no particular order or degree of involvement, completeness not guaranteed.  
+Please open a PR if you're missing!
 
 - adomerle [github](https://github.com/adomerle) 
 - vipaoL [github](https://github.com/vipaoL) 
