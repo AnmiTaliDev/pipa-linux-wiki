@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: Linux on Pipa Wiki
-site_url: https://pipa-wiki.github.io/
+site_url: https://pipa-linux-wiki.github.io/
 theme:
   name: material
