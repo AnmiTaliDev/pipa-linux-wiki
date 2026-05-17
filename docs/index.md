@@ -1,13 +1,13 @@
-# Welcome to MkDocs
+# Welcome
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+to the Linux on Pipa Wiki. 
 
-## Commands
+This Wiki attempts to document and gather resources related to running the Linux operating system on the Xiaomi Pad 6 (pipa)
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Getting started 
+
+* [Kernel Information & Status](kernel)
+* [Overview of available Linux Distros](distros/1-overview)
 
 ## Project layout
 
