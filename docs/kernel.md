@@ -24,7 +24,7 @@ Please open a PR if you're missing!
 
 | Sleep | Speakers | Mic | WLAN | Bluetooth | Charging @10w | Battery Status | Hall Sensor | Display | Brightness | Touch | GPU | USB (Host/Client) | DP alt mode | UFS | Back Camera | Front Camera | Sensors | Xiaomi Keyboard | Pen |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ (Video only) | ✅️ | ⚠️ (sometimes) | ❌️ | ⚠️ (flaky) | ✅️ | ✅️ | 
+| ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ (Video only) | ✅️ | ⚠️ (sometimes) | ❌️ | ⚠️ (flaky) | ✅️ (pmOS: ❌️) | ✅️ (pmOS: ❌️) | 
 
 ## Actively maintained Kernels
 All of those are based on the original port of the mainline kernel.
