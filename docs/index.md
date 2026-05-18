@@ -17,7 +17,7 @@ The information in this Wiki is not complete and provided with absolutely no war
 * pipa general chat [t.me/xiaomi_pipa](https://t.me/xiaomi_pipa)
 
 ## Contributors
-any help with documenting is very welcome :) [rr1111.github.io/pipa-linux-wiki](https://rr1111.github.io/pipa-linux-wiki/)
+any help with documenting is very welcome :) [github.com/rr1111/pipa-linux-wiki](https://github.com/rr1111/pipa-linux-wiki/)
 
 * rr1111 [github](https://github.com/rr1111)
 * ...
