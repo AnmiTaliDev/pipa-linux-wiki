@@ -19,7 +19,7 @@ This is a nonexhaustive list of available linux distros with varying degrees of 
 > These distribution's repositories have seen some commits recently, but might not have up-to-date kernel versions or newer fixes, ...
 
 - [Regular Fedora by PipaDB](https://github.com/PipaDB/fedora-xiaomi-pipa)
-- [Void Linux by userg0d](https://github.com/userg0d/void-linux-pipa)[:material-file-document:](void.md)
+- [Void Linux by userg0d](https://github.com/userg0d/void-linux-pipa) [:material-file-document:](void.md)
 
 
 ## Stale
