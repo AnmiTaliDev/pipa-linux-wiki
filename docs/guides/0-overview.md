@@ -36,3 +36,24 @@ Be sure to download the Fastboot ROM for your device.
 	```
 	DO NOT run `flash_all_lock.sh` as this will relock your Bootloader.
 
+## Installing Linux  
+??? warning "Always use the specific instruction that come with the Images you want to install!"
+	If there are none and you are provided with a boot image (likely named boot.img) and a root image (likely named root.img, rootfs.img or userdata.img), you can try these generic instructions:  
+	Flash the boot image:
+	```bash
+	fastboot flash boot_ab <boot image>
+	```
+	Flash the rootfs image:
+	```bash
+	fastboot flash userdata <root image>
+	```
+	Clear the dtbo partition:
+	```bash
+	fastboot erase dtbo	
+	```
+	Exit fastboot and reboot:
+	```bash
+	fastboot reboot
+	```
+
+
