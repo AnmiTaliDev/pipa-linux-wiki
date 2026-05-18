@@ -2,7 +2,7 @@
 
 ## Kernel developers
 The talented People involved in initial kernel upbringing, maintenance, porting ...  
-List credit to: TheMojoMan @[xiaomi-pipa repo](https://github.com/TheMojoMan/xiaomi-pipa).  
+List credit to: [TheMojoMan/xiaomi-pipa](https://github.com/TheMojoMan/xiaomi-pipa).  
 In no particular order or degree of involvement, completeness not guaranteed.  
 Please open a PR if you're missing!
 
@@ -33,7 +33,7 @@ All of those are based on the original port of the mainline kernel.
 - source at [github.com/pipaDB/linux](https://github.com/pipaDB/linux)
 - latest version: `7.0.8`
 - 'close-to'-mainline
-- DP alt mode audio, front camera, 25w charging working
+- DP alt mode audio, front camera, 25w charging working on newest branches
 
 
 
