@@ -26,9 +26,12 @@ Be sure to download the Fastboot ROM for your device.
 	|--------------------|--------------------|
 	|Global/EEA|23043RP34G|
 	|China|23043RP34C|
-	|India|23043RP34I|
-	If you have a China model on HyperOS 2 you cannot unlock without first rolling back to HyperOS 1/MIUI using EDL!
+	|India|23043RP34I|  
 
+	!!! warning
+		- DO NOT cross-flash Chinese and Global devices/ROMs! You might brick your device!
+		- If you have a China model on HyperOS 2 you cannot unlock without first rolling back to HyperOS 1/MIUI using EDL!
+		
 
 !!! note "In the extracted Firmware folder, with pipa in Fastboot:"
 	``` bash
