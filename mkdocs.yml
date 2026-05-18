@@ -4,6 +4,10 @@ site_url: https://pipa-linux-wiki.github.io/
 theme:
   name: material
 
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+
   icon:
     logo: material/tablet
 
@@ -24,6 +28,17 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+
+  features:
+    - navigation.footer
+
+extra:
+  social:
+    - icon: simple/telegram
+      link: https://t.me/pipa_mainline
+    - icon: simple/github
+      link: https://github.com/rr1111/pipa-linux-wiki
+
 
 
 markdown_extensions:
