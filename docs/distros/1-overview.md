@@ -5,13 +5,13 @@ This is a nonexhaustive list of available linux distros with varying degrees of 
 
 ## Actively maintained
 > The distributions are actively maintained & receive regular updates to the kernel.
-### Fedora based Distros
+### Fedora based Distros [:material-file-document:](fedora.md)
 - [Pocketblue Fedora Remix by the Pocketblue Team](https://github.com/pocketblue/pocketblue)
 - [Regular Fedora by rr1111](https://github.com/rr1111/pipa-fedora-builder-43)
-### Arch based Distros
+### Arch based Distros [:material-file-document:](alarm.md)
 - [ARMtix (Artix Linux ARM) by Neo10e](https://github.com/Neo10e/armtix-xiaomi-pipa)
 - [Alarm (Arch Linux ARM) by maaki](https://t.me/pipa_mainline/32978)
-### Alpine based distros
+### Alpine based distros [:material-file-document:](postmarketOS.md)
 - [postmarketOS by the postmarketOS contributors](https://wiki.postmarketos.org/wiki/Xiaomi_Pad_6_(xiaomi-pipa))
 
 
@@ -19,7 +19,7 @@ This is a nonexhaustive list of available linux distros with varying degrees of 
 > These distribution's repositories have seen some commits recently, but might not have up-to-date kernel versions or newer fixes, ...
 
 - [Regular Fedora by PipaDB](https://github.com/PipaDB/fedora-xiaomi-pipa)
-- [Void Linux by userg0d](https://github.com/userg0d/void-linux-pipa)
+- [Void Linux by userg0d](https://github.com/userg0d/void-linux-pipa)[:material-file-document:](void.md)
 
 
 ## Stale
