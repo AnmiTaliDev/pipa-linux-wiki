@@ -3,19 +3,19 @@
 ## Kernel developers
 The talented People involved in initial kernel upbringing, maintenance, porting ...  
 List credit to: [TheMojoMan/xiaomi-pipa](https://github.com/TheMojoMan/xiaomi-pipa).  
-In no particular order or degree of involvement, completeness not guaranteed.  
+In no particular order or degree of involvement. Completeness not guaranteed.  
 Please open a PR if you're missing!
 
-- adomerle [github](https://github.com/adomerle) 
-- vipaoL [github](https://github.com/vipaoL) 
-- luka177 [github](https://github.com/luka177) 
-- Dominik Sitarski [github](https://github.com/domin746826) 
-- Danila Tikhonov [github](https://github.com/JIaxyga) 
-- Teguh Sobirin [github](https://github.com/tjstyle) 
-- lujianhua [github](https://github.com/lujianhua) 
-- map220v [github](https://github.com/map220v) 
-- maverickjb [github](https://github.com/maverickjb) 
-- rmux [github](https://github.com/rmuxnet) 
+- adomerle [:material-github:](https://github.com/adomerle) 
+- vipaoL [:material-github:](https://github.com/vipaoL) 
+- luka177 [:material-github:](https://github.com/luka177) 
+- Dominik Sitarski [:material-github:](https://github.com/domin746826) 
+- Danila Tikhonov [:material-github:](https://github.com/JIaxyga) 
+- Teguh Sobirin [:material-github:](https://github.com/tjstyle) 
+- lujianhua [:material-github:](https://github.com/lujianhua) 
+- map220v [:material-github:](https://github.com/map220v) 
+- maverickjb [:material-github:](https://github.com/maverickjb) 
+- rmuxnet [:material-github:](https://github.com/rmuxnet) 
 - Users nixxiz, nikroks at pipa telegram groups 
 - [postmarketOS Team](https://postmarketos.org) 
 

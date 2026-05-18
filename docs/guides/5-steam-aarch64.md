@@ -1,1 +1,1 @@
-# Installing the ARM version of Steam and running games
+# Installing the ARM version of Steam and running x86 games

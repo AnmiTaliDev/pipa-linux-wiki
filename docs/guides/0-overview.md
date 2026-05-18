@@ -19,6 +19,10 @@ Before installing Linux on your pipa, you should first flash the latest official
 You can get the latest Firmware directly from Xiaomi's servers on [miuirom.org](https://miuirom.org/tablets/xiaomi-pad-6).  
 Be sure to download the Fastboot ROM for your device.  
 
+!!! warning
+		- DO NOT cross-flash Chinese and Global devices/ROMs! You might brick your device!
+		- If you have a China model on HyperOS 2 you cannot unlock without first rolling back to HyperOS 1/MIUI using EDL!  
+
 ??? note "Getting your device region:"
 	Check the Model Number on the back of your device, it should be:  
 
@@ -27,11 +31,7 @@ Be sure to download the Fastboot ROM for your device.
 	|Global/EEA|23043RP34G|
 	|China|23043RP34C|
 	|India|23043RP34I|  
-
-	!!! warning
-		- DO NOT cross-flash Chinese and Global devices/ROMs! You might brick your device!
-		- If you have a China model on HyperOS 2 you cannot unlock without first rolling back to HyperOS 1/MIUI using EDL!
-		
+	
 
 !!! note "In the extracted Firmware folder, with pipa in Fastboot:"
 	``` bash

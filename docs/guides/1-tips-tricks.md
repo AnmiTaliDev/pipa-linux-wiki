@@ -22,21 +22,22 @@
         	/usr/bin/systemctl restart iio-sensor-proxy.service
         	/usr/bin/systemctl restart hexagonrpcd-sdsp.service
         	/usr/bin/systemctl restart iio-sensor-proxy.service
-      	'
+      		'
   		;;
 	esac
 	```
 
 ??? warning "Netflix, Spotify, etc dont work because of missing Widevine CDM Module"
-	Widevine still doesn't package ist CDM for ARM64 Linux.  
+	Google still don't package their Widevine CDM for ARM64 Linux.  
 
-	You can either install it manually, or use [Asahi Linux' Widevine Installer](https://github.com/AsahiLinux/widevine-installer)
+	You can either install it manually, or use [Asahi Linux' Widevine Installer](https://github.com/AsahiLinux/widevine-installer).  
+	This will only work for Firefox and Chromium-based Browsers installed as system Packages, not for Flatpaks.
 
 ??? quote "Bluelight Filter/Night Light doesn't work in Gnome for lack of a Color Profile"
-	It's the gnome way, you're wrong™️
+	It's the gnome way, you're wrong™️.
 
 ??? warning "Performance seems strangely bad and/or Power Profiles on my Desktop Environment are missing"
-	Install `tuned` & `tuned-ppd`
+	Install `tuned` & `tuned-ppd`.
 
 ??? failure "GTK/libadwaita apps are artifacting heavily on Kernel versions newer than 6.19.0"
 	 This is a known GTK/GSK issue. A temporary fix is to force GSK to use its legacy renderer: 
@@ -51,4 +52,9 @@
 	sudo alternatives --set iptables /usr/bin/iptables-nft
 	sudo systemctl restart docker
 	``` 
+
+## Tips & Tricks
+### Unbricking your pipa using EDL mode
+You can try unbricking your device with Emergency Download Mode using rmuxnet's guide on the [pipaDB Github](https://github.com/PipaDB/Info/blob/main/edl.md).
+### Choosing a Desktop Environment or Window Manager
 	

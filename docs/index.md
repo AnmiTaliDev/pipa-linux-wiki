@@ -26,7 +26,7 @@ This Wiki attempts to document and gather resources related to running the Linux
 ## Contributors
 any help with documenting is very welcome :) [github.com/rr1111/pipa-linux-wiki](https://github.com/rr1111/pipa-linux-wiki/)
 
-- rr1111 [github](https://github.com/rr1111)
+- rr1111 [:material-github:](https://github.com/rr1111)
 - ...
 
 
