@@ -11,8 +11,8 @@ This is a nonexhaustive list of available linux distros with varying degrees of 
 ### Arch based Distros [:material-file-document:](alarm.md)
 - [ARMtix (Artix Linux ARM) by Neo10e](https://github.com/Neo10e/armtix-xiaomi-pipa)
 - [Alarm (Arch Linux ARM) by maaki](https://t.me/pipa_mainline/32978)
-### Alpine based distros [:material-file-document:](postmarketOS.md)
-- [postmarketOS by the postmarketOS contributors](https://wiki.postmarketos.org/wiki/Xiaomi_Pad_6_(xiaomi-pipa))
+### Alpine based distros 
+- [postmarketOS by the postmarketOS contributors](https://wiki.postmarketos.org/wiki/Xiaomi_Pad_6_(xiaomi-pipa)) [:material-file-document:](postmarketOS.md)
 
 
 ## Semi Actively maintained
