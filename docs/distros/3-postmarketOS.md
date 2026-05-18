@@ -1,4 +1,4 @@
-# postmarketOS
+# :simple-alpinelinux: postmarketOS 
 
 is one of the largest and oldest mobile Linux projects. Based on Alpine Linux, it provides a large, up-to-date package selection (on the `edge` channel) and a secure base.  
 

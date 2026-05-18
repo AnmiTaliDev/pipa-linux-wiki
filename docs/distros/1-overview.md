@@ -4,7 +4,7 @@ This is a nonexhaustive list of available linux distros with varying degrees of 
 
 
 ## Actively maintained
-> The distributions are actively maintained & receive regular updates to the kernel.
+> These distributions are actively maintained & receive regular updates to the kernel.
 ### Fedora based Distros [:material-file-document:](2-fedora.md)
 - [Pocketblue Fedora Remix by the Pocketblue Team](https://github.com/pocketblue/pocketblue) [:material-file-document:](2-fedora.md/#pocketblue-fedora-remix)
 - [Regular Fedora by rr1111](https://github.com/rr1111/pipa-fedora-builder-43) [:material-file-document:](2-fedora.md/#regular-fedora)

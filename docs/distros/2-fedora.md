@@ -1,4 +1,4 @@
-# Fedora based Distros
+# :material-fedora: Fedora based Distros 
 
 Until there are maintained Ubuntu/Debian images available, Fedora Linux based Distros will probably be your best choice for day-to-day stability and ease of use.  
 ARM64 is a first-class architecture for Fedora, so it will probably have the best documentation and a large selection of packages.  
@@ -28,7 +28,7 @@ Useful links:
 [Fedora Atomic Documentation](https://docs.fedoraproject.org/en-US/atomic-desktops/getting-started/)  
 
 [:material-linux:](../kernel.md/#pipa-mainline-kernel): pipa-mainline, 6.18.2  
-[Source :material-github:](https://github.com/pocketblue/pocketblue){ .md-button .md-button--primary } [Wiki :material-book:](https://pocketblue.github.io){ .md-button } [Images :material-download: ](https://github.com/pocketblue/pocketblue/releases/latest){ .md-button }
+[Source :material-github:](https://github.com/pocketblue/pocketblue){ .md-button .md-button--primary } [Wiki :material-book:](https://pocketblue.github.io){ .md-button } [Images :material-download: ](https://github.com/pocketblue/pocketblue/releases/latest){ .md-button } [COPR :material-package: ](https://copr.fedorainfracloud.org/coprs/pocketblue){ .md-button }
 
 
 ## Regular Fedora
@@ -46,7 +46,7 @@ Probably your best choice if you have prior Linux experience and want an up-to-d
 - Might miss default packages (Fonts, etc ...)
 
 [:material-linux:](../kernel.md/#pipadb-kernel): pipaDB, 7.0.8  
-[rr1111 Source :material-github:](https://github.com/rr1111/pipa-fedora-builder-43){ .md-button .md-button--primary } [Images :material-download: ](https://github.com/rr1111/pipa-fedora-builder-43/releases/latest){ .md-button }  
+[rr1111 Source :material-github:](https://github.com/rr1111/pipa-fedora-builder-43){ .md-button .md-button--primary } [Images :material-download: ](https://github.com/rr1111/pipa-fedora-builder-43/releases/latest){ .md-button } [COPR :material-package: ](https://copr.fedorainfracloud.org/coprs/reyr111/pipa-packages){ .md-button }   
 
 [:material-linux:](): 6.15.11  
-[pipaDB Source :material-github:](https://github.com/PipaDB/fedora-xiaomi-pipa){ .md-button .md-button--primary } [Images :material-download: ](https://github.com/PipaDB/fedora-xiaomi-pipa/releases/latest){ .md-button }
+[pipaDB Source :material-github:](https://github.com/PipaDB/fedora-xiaomi-pipa){ .md-button .md-button--primary } [Images :material-download: ](https://github.com/PipaDB/fedora-xiaomi-pipa/releases/latest){ .md-button } [COPR :material-package: ](https://copr.fedorainfracloud.org/coprs/rmuxnet/pipa-support){ .md-button }
