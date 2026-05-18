@@ -5,7 +5,7 @@ to the Linux on Pipa Wiki.
 This Wiki attempts to document and gather resources related to running the Linux operating system on the Xiaomi Pad 6 (pipa).
 
 
-**Disclaimer:**  
+### Disclaimer  
 * While I will try to make them as beginner-friendly as possible, you are expected to have at least **some** knowledge of the Linux operating system, fastboot, Android ROM flashing and bootloader unlocking when following any of the guides provided by this wiki.
 * The information in this Wiki is not complete and provided with absolutely no warranty!
 * All of the mentioned Projects are community efforts, often maintained by 1 or 2 people (**People!**).
