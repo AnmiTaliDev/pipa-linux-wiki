@@ -1,6 +1,7 @@
 # Fedora based Distros
 
 Until there are maintained Ubuntu/Debian images available, Fedora Linux based Distros will probably be your best choice for day-to-day stability and ease of use.  
+ARM64 is a first-class architecture for Fedora, so it will probably have the best documentation and a large selection of packages.  
 
 There are two types of Fedora based Distros available:
 
@@ -8,9 +9,6 @@ There are two types of Fedora based Distros available:
 is a libostree and Bootc based immutable Distro with a read-only root filesystem and image-based, atomic updates.  
 Images are based on Upstream Silverblue/Kionite images so the experience is very close to 'stock' Fedora.  
 Pocketblue will probably be your best Choice if you want a stably OS for daily use without much tinkering.  
-
-
-[:material-linux:](../kernel.md/#pipadb-kernel): pipa-mainline, 6.18.2  
 
 #### Benefits:
 - Very beginner-friendly
@@ -23,7 +21,7 @@ Pocketblue will probably be your best Choice if you want a stably OS for daily u
 #### Drawbacks:
 - You will rely heavily on Toolbox, Flatpaks and AppImages for Apps
 - Atomic nature requires extra steps to install regular RPM packages
-- Might feel cumbersome to Enthusiasts
+- Might feel limiting to Enthusiasts
 
 Useful links:  
 [Switching from kxboot to Silicium UEFI & GRUB on a running System](https://github.com/pocketblue/pocketblue/issues/223)  
@@ -41,6 +39,7 @@ Probably your best choice if you have prior Linux experience and want an up-to-d
 - Packages directly from the Fedora Repos, everything but pipa-specific packages independent from the distro maintainer
 - You can build your own Images with packages of your choosing
 - I try to ship the newest Kernel on my Builds
+- Good mix of leading-edge and stability
 
 #### Drawbacks:
 - Things might break on updates as the maintainer has little control over a running System

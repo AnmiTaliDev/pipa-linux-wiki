@@ -1,1 +1,0 @@
-# ARMtix - Artix Linux ARM
