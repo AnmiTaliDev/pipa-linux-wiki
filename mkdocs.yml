@@ -1,15 +1,22 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: Linux on Pipa Wiki
 site_url: https://pipa-linux-wiki.github.io/
+repo_url: https://github.com/rr1111/pipa-linux-wiki
+repo_name: rr1111/pipa-linux-wiki
+edit_uri: edit/master/docs/
 theme:
   name: material
 
   features:
     - navigation.instant
     - navigation.instant.progress
+    - navigation.top
+    - content.action.edit
 
   icon:
     logo: material/tablet
+    repo: simple/github
+    edit: material/pencil
 
   palette:
     - media: "(prefers-color-scheme)"
@@ -19,12 +26,14 @@ theme:
 
     - media: "(prefers-color-scheme: light)"
       scheme: default 
+      primary: deep purple
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
 
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: deep purple
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
