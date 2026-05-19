@@ -36,7 +36,7 @@ Currently, the 6.18.2 branch of pipa-mainline seems to be the most stable, at le
 - source at [github.com/pipaDB/linux](https://github.com/pipaDB/linux)
 - latest version: `7.0.8`
 - 'close-to'-mainline
-- DP alt mode audio, front camera, --25w charging-- working on newest branches
+- DP alt mode audio, front camera, ~~25w charging~~ working on newest branches
 
 
 
