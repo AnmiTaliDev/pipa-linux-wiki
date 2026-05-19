@@ -34,7 +34,7 @@
 	This will only work for Firefox and Chromium-based Browsers installed as system Packages, not for Flatpaks.
 
 ??? quote "Bluelight Filter/Night Light doesn't work in Gnome for lack of a Color Profile"
-    ![Gnome Knows Best](gnome-knows-best.jpeg)
+    ![Gnome Knows Best](../gnome-knows-best.jpeg)
 
 ??? warning "Performance seems strangely bad and/or Power Profiles on my Desktop Environment are missing"
 	Install `tuned` & `tuned-ppd`.
