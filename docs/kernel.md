@@ -48,3 +48,4 @@ All of those are based on the original port of the mainline kernel.
 - source at [gitlab.postmarketos.org/postmarketOS/pmaports/-/tree/main/device/testing/linux-xiaomi-pipa](https://gitlab.postmarketos.org/postmarketOS/pmaports/-/tree/main/device/testing/linux-xiaomi-pipa)
 - latest version: `7.0.6`
 - mainline kernel with separate patches
+- seemingly no support for the Xiaomi Pen & Keyboard at this time

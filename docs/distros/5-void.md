@@ -1,1 +1,1 @@
-# Void Linux
+# :simple-voidlinux: Void Linux

@@ -1,4 +1,5 @@
-# :material-fedora: Fedora based Distros 
+# :material-fedora: Fedora based Distros  
+[fedoraproject.org](https://fedoraproject.org/)
 
 Until there are maintained Ubuntu/Debian images available, Fedora Linux based Distros will probably be your best choice for day-to-day stability and ease of use.  
 ARM64 is a first-class architecture for Fedora, so it will probably have the best documentation and a large selection of packages.  
@@ -45,8 +46,8 @@ Probably your best choice if you have prior Linux experience and want an up-to-d
 - Things might break on updates as the maintainer has little control over a running System
 - Might miss default packages (Fonts, etc ...)
 
-[:material-linux:](../kernel.md/#pipadb-kernel): pipaDB, 7.0.8  
+[:material-linux:](../kernel.md/#pipadb-kernel) pipaDB, 7.0.8  
 [rr1111 Source :material-github:](https://github.com/rr1111/pipa-fedora-builder-43){ .md-button .md-button--primary } [Images :material-download: ](https://github.com/rr1111/pipa-fedora-builder-43/releases/latest){ .md-button } [COPR :material-package: ](https://copr.fedorainfracloud.org/coprs/reyr111/pipa-packages){ .md-button }   
 
-[:material-linux:](): 6.15.11  
+[:material-linux:]() 6.15.11  
 [pipaDB Source :material-github:](https://github.com/PipaDB/fedora-xiaomi-pipa){ .md-button .md-button--primary } [Images :material-download: ](https://github.com/PipaDB/fedora-xiaomi-pipa/releases/latest){ .md-button } [COPR :material-package: ](https://copr.fedorainfracloud.org/coprs/rmuxnet/pipa-support){ .md-button }
