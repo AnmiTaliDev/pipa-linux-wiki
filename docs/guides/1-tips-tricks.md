@@ -55,6 +55,14 @@
 
 ## Tips & Tricks
 ### Unbricking your pipa using EDL mode
-You can try unbricking your device with Emergency Download Mode using rmuxnet's guide on the [pipaDB Github](https://github.com/PipaDB/Info/blob/main/edl.md).
-### Choosing a Desktop Environment or Window Manager
-	
+You can try unbricking your device with Emergency Download Mode using rmuxnet's guide on the [pipaDB Github](https://github.com/PipaDB/Info/blob/main/edl.md).  
+
+### Choosing a Desktop Environment or Window Manager  
+...  
+
+
+### Gnome Desktop Environment 
+#### Recommended Shell extensions
+- [Screen Rotation Extension](https://github.com/shyzus/gnome-shell-extension-screen-autorotate) to toggle auto-rotate or set it up as manual Rotation toggle
+- [GJS OSK extension](https://github.com/Vishram1123/gjs-osk) to make the Gnome OSK usable (if your enter key gets stuck, remove it)
+- [TouchUP extension](https://github.com/mityax/gnome-extension-touchup) to make the Gnome Shell more usable on a Touchscreen
