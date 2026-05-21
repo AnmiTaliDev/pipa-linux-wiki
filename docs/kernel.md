@@ -24,16 +24,19 @@ Please open a PR if you're missing!
 
 | Sleep | Speakers | Mic | WLAN | Bluetooth | Charging @10w | Battery Status | Hall Sensor | Display | Brightness | Touch | GPU | USB (Host/Client) | DP alt mode | UFS | Back Camera | Front Camera | Sensors | Xiaomi Keyboard | Pen |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ (Video only) | ✅️ | ⚠️ (sometimes) | ❌️ | ⚠️ (flaky) | ✅️ (pmOS: ❌️) | ✅️ (pmOS: ❌️) | 
-
+| ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ | ✅️ (Video only) | ✅️ | ⚠️ (sometimes) | ❌️ | ⚠️ (flaky) | ✅️ (pmOS: ❌️) | ✅️ (pmOS: ❌️) |  
+  
 ## Actively maintained Kernels
-All of those are based on the original port of the mainline kernel.
+All of those are based on the original port of the mainline kernel.  
+
+Currently, the 6.18.2 branch of pipa-mainline seems to be the most stable, at least to me.  
+
 
 ### pipaDB Kernel
 - source at [github.com/pipaDB/linux](https://github.com/pipaDB/linux)
 - latest version: `7.0.8`
 - 'close-to'-mainline
-- DP alt mode audio, front camera, 25w charging working on newest branches
+- DP alt mode audio, front camera, ~~25w charging~~ working on newest branches
 
 
 
