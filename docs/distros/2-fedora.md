@@ -24,7 +24,7 @@ Pocketblue will probably be your best Choice if you want a stably OS for daily u
 - Atomic nature requires extra steps to install regular RPM packages
 - Might feel limiting to Enthusiasts
 
-Useful links:  
+**Useful links:**  
 [Switching from kxboot to Silicium UEFI & GRUB on a running System](https://github.com/pocketblue/pocketblue/issues/223)  
 [Fedora Atomic Documentation](https://docs.fedoraproject.org/en-US/atomic-desktops/getting-started/)  
 
