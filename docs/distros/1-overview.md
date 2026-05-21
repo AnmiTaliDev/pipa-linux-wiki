@@ -39,6 +39,6 @@ This is a nonexhaustive list of available linux distros with varying degrees of 
 |------------|------------|------------|------------|------------|------------|
 |Pocketblue|5/5|4.5/5|5/5|✅|✅|
 |Fedora|4/5|5/5|4/5|✅|⛔|
-|ARMtix|2/5|5/5|?|✅|⛔|
+|ARMtix|2/5|3/5|?|✅|⛔|
 |Alarm|3/5|3/5|?|✅|⛔|
 |postmarketOS|4/5 (with systemd)|?|2/5|⛔ (pmbootstrap)|✅✅|

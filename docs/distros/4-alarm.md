@@ -17,15 +17,16 @@ is community port attempting to bring Arch Linux to ARMv7 and v8 based devices.
 
 #### Benefits:
 - Fast, very customizable base OS
+- Barebones images, ship without any DE or WM installed
 - [Arch Wiki](https://wiki.archlinux.org/title/Main_page)
 - Rolling release model **should** provide up-to-date packages
 
 #### Drawbacks:
 - Can be overwhelming for new users
+- Barebones images, ship without any DE or WM installed
 - Good chance of breaking your system if you mess around & don't know what youre doing
 - Rolling updates can introduce breaking changes, bugs
 - Repositories have been quite stale for a while, shipping outdated packages that are behind regular Arch
-
 
 [:material-linux:](../kernel.md/#pipa-mainline-kernel) pipa-mainline, 6.15.11  
 [Telegram :material-download: ](https://t.me/pipa_mainline/32978){ .md-button .md-button--primary } [PKGBUILDs :material-package: ](https://github.com/maakiopus/PKGBUILDs-pipa){ .md-button }
