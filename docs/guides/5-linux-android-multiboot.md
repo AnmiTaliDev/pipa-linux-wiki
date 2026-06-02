@@ -291,3 +291,8 @@ Choose one and download it. Make sure the downloaded files include `boot.img` an
 
 !!! note
     Linux installation is now complete. Once you have confirmed that Linux boots correctly, use the Android boot instructions from [Basic idea](#basic-idea) to switch back to slot `a`.
+
+## References
+
+- [Fedora Linux 44 for the Xiaomi Pad 6 (pipa) - Installation guide](https://github.com/rr1111/pipa-fedora-builder-43/blob/main/INSTALL.md)
+- [Serba Serbi Tekno - Tutorial Install DualBoot Android OS dan Fedora OS di Xiaomi Pad 6](https://youtu.be/hAFqZAvaEkA?si=qIC8Bi12YPRNRveP)
