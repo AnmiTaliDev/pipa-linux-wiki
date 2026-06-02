@@ -13,7 +13,7 @@
 - A computer with [`adb` and `fastboot`](https://developer.android.com/tools/releases/platform-tools) installed.
 - A USB cable to connect the tablet to your computer.
 - [`twrp.img`](https://t.me/pipa_mainline/27559), used to boot into TWRP temporarily.
-- [`parted`](https://t.me/pipa_mainline/25847), used to manage the storage partition layout.
+- [`parted`](https://t.me/pipa_mainline/27563), used to manage the storage partition layout.
 - A Linux image file for the distro you want to install.
 
 ## Before you start
@@ -39,7 +39,7 @@ To switch from Android to Linux, rooted Android users can use [Boot Control](htt
 To switch from Linux back to Android, use:
 
 ```bash
-qbootctl -s a
+sudo qbootctl -s a
 ```
 
 You can also use the [qbootctl GUI](https://github.com/khairul169/qbootctrl-gui).
@@ -60,174 +60,234 @@ This step prepares space for Linux on the tablet storage.
 
 1. Boot TWRP temporarily:
 
-```bash
-fastboot boot twrp.img
-```
+    The TWRP image file may have a different name depending on who packaged it. In the linked download above, the file is named `boot-rmux.img`, so that is the name used in the example below.
+
+    ```bash
+    fastboot boot boot-rmux.img
+    ```
 
 2. After TWRP boots, push `parted` to the tablet:
 
-```bash
-adb push parted /tmp/parted
-```
+    ```bash
+    adb push parted /tmp/parted
+    ```
 
 3. Start an adb shell:
 
-```bash
-adb shell
-```
+    ```bash
+    adb shell
+    ```
 
 4. Make `parted` executable:
 
-```bash
-chmod +x /tmp/parted
-```
+    ```bash
+    chmod +x /tmp/parted
+    ```
 
-5. Use `parted` to check the current partition layout before making changes:
+5. Start `parted`:
 
-```bash
-/tmp/parted /dev/block/sda print
-```
+    ```bash
+    /tmp/parted /dev/block/sda
+    ```
 
-6. Create the Linux partition using the layout you want to use.
+    Before this, your shell prompt will usually look like `pipa:/ #`. If the command works, you will enter the interactive `parted` prompt, so the prompt changes from the normal shell to `(parted)`.
 
-!!! warning
-    Double-check the partition numbers and sizes before applying any change. A wrong command can erase Android or make the tablet unbootable.
+    You should see something like this:
 
-## Step 3: Install the Linux rootfs
+    ```text
+    GNU Parted 3.2
+    Using /dev/block/sda
+    Welcome to GNU Parted! Type 'help' to view a list of commands.
+    (parted)
+    ```
 
-Extract the distro rootfs into the Linux target location.
+6. Use `print` to check the current partition layout before making changes:
 
-Example outline:
+    ```bash
+    print
+    ```
 
-```bash
-sudo mount /dev/YOUR_LINUX_PARTITION /mnt
-sudo tar -xpf rootfs.tar -C /mnt
-sync
-sudo umount /mnt
-```
+    This prints the partition table for the internal storage. You will see the disk size at the top, followed by a list of partitions with columns such as `Number`, `Start`, `End`, `Size`, and `Name`.
 
-Replace `/dev/YOUR_LINUX_PARTITION` and `rootfs.tar` with the actual device and file name.
+    You are looking for the partition named `userdata`. On pipa, this is usually the last partition in the table, often partition `34`.
 
-## Step 4: Prepare kernel and boot files
+    Example:
 
-You need a kernel that supports pipa hardware.
+    ```text
+    Model: SKhynix HN8T15DEHKX075 (scsi)
+    Disk /dev/block/sda: 253GB
+    Sector size (logical/physical): 4096B/4096B
+    Partition Table: gpt
+    Disk Flags: 
 
-Prepare the required boot files:
+    Number  Start   End     Size    File system  Name             Flags
+    ...
+    34      11.1GB  253GB   242GB                userdata
+    ```
 
-- Kernel image
-- Device tree
-- Initramfs, if needed
-- Kernel command line
-- UEFI files, if using UEFI
+    In this example, `userdata` is partition `34`, and it uses most of the remaining internal storage.
 
-Make sure the kernel command line points to the correct Linux root location.
+    Compare the `End` value of `userdata` with the total disk size shown at the top. Here, the disk size is `253GB`, and the `userdata` partition also ends at `253GB`, which means the layout is still close to the default one.
 
-Example root arguments:
+    If your `userdata` partition ends much earlier than the total disk size, or if the partition number and layout look very different from the example, the tablet was likely repartitioned before. Double-check the partition table carefully before making any changes.
 
-```text
-root=/dev/YOUR_LINUX_PARTITION rw
-```
+    !!! warning
+        Double-check the partition numbers and sizes before applying any change. A wrong command can erase Android or make the tablet unbootable.
 
-or, for image based setups:
+7. Delete the existing `userdata` partition first.
 
-```text
-root=/dev/loop0 rw
-```
+    On a mostly stock pipa layout, `userdata` is usually partition `34`, so the command is often:
 
-## Step 5: Add a boot method
+    ```text
+    rm 34
+    ```
 
-Choose one boot method and document the exact command here.
+    You may see a warning like this:
 
-### Temporary boot with fastboot
+    ```text
+    Warning: Partition /dev/block/sda34 is being used. Are you sure you want to continue?
+    Yes/No? yes
+    Error: Partition(s) 34 on /dev/block/sda have been written, but we have been unable to inform the kernel of the change,
+    probably because it/they are in use. As a result, the old partition(s) will remain in use.
+    before making further changes.
+    Ignore/Cancel? ignore
+    ```
 
-This is useful for testing because it does not permanently flash the boot image.
+    Read the warning first and make sure you are deleting the correct partition. In this case, if you are sure that partition `34` is `userdata`, it is usually safe to answer `yes` and then `ignore`. This happens because the partition is still in use by the running environment, even though the partition table change itself was written.
 
-```bash
-fastboot boot linux-boot.img
-```
+8. Create two new partitions in the free space:
 
-### Flash Linux boot image
+    - one partition for Android
+    - one partition for Linux
 
-Only do this if you know how to restore the Android boot image.
+    Choose a split point. This value is used twice: as the end of the Android `userdata` partition, and as the start of the Linux partition.
 
-```bash
-fastboot flash boot linux-boot.img
-```
+    Examples:
 
-### UEFI boot menu
+    - `173GB` gives Linux about `80GB`
+    - `153GB` gives Linux about `100GB`
 
-If using UEFI, place the Linux boot entry in the EFI partition and select it from the boot menu.
+    Then create the Android `userdata` partition first:
 
-Document the exact boot entry name here:
+    ```text
+    mkpart userdata ext4 11.1GB 153GB
+    ```
 
-```text
-Linux on pipa
-```
+    Then create the Linux partition:
 
-## Step 6: First Linux boot
+    ```text
+    mkpart linux ext4 153GB 253GB
+    ```
 
-1. Boot Linux using your chosen method.
-2. Wait for the first boot to finish.
-3. Login with the default distro credentials.
-4. Resize the filesystem if needed.
-5. Configure Wi-Fi, users, timezone, and packages.
+    After making new partitions, the result will look something like this:
+    ```text
+    Number  Start   End     Size    File system  Name             Flags
+    ...
+    34      11.1GB  153GB   142GB   ext4   
+    35      153GB   253GB   100GB   ext4   
+    ```
 
-Useful first checks:
+    !!! warning
+        Run the `mkpart` commands one by one in the `(parted)` prompt. Double-check the start and end values before pressing Enter. A wrong value here can overlap partitions or leave Android without enough space.
 
-```bash
-uname -a
-lsblk
-df -h
-ip addr
-```
+9. Name the new partitions.
 
-## Step 7: Boot back to Android
+    On a mostly stock layout, the recreated Android partition will usually be `34`, and the new Linux partition will usually be `35`.
 
-Reboot the device and confirm Android still works.
+    First, name partition `34` as `userdata` for Android
 
-If Android does not boot, restore the Android boot image or select the Android boot entry from UEFI.
+    ```text
+    name 34 userdata
+    ```
 
-Example:
+    Then name partition `35` for Linux. You can use `linux` or another simple name if you prefer.
 
-```bash
-fastboot flash boot android-boot.img
-fastboot reboot
-```
+    ```text
+    name 35 linux
+    ```
 
-## Troubleshooting
+    After naming the partitions, the result will look something like this:
 
-### Device boots only Android
+    ```text
+    Number  Start   End     Size    File system  Name             Flags
+    ...
+    34      11.1GB  153GB   142GB   ext4   userdata
+    35      153GB   253GB   100GB   ext4   linux
+    ```
 
-- Check that the Linux boot image was actually used.
-- Check the UEFI boot order, if using UEFI.
-- Check that the kernel command line points to the Linux rootfs.
+10. Exit `parted`, then leave the adb shell.
 
-### Linux kernel boots but rootfs is missing
+    First, quit the `(parted)` prompt:
 
-- Check the root partition or image path.
-- Check filesystem support in the kernel or initramfs.
-- Check `root=` kernel argument.
+    ```text
+    quit
+    ```
 
-### Android no longer boots
+    This will return you to the normal shell prompt, which usually looks like `pipa:/ #`.
 
-- Restore the original Android boot image.
-- Reflash the Android ROM if needed.
-- Do not erase user data unless you already have a backup or are prepared to lose it.
+    Then exit the shell:
 
-### Touchscreen, Wi-Fi, audio, or GPU does not work
+    ```text
+    exit
+    ```
 
-- Check the kernel status page.
-- Try a newer kernel build.
-- Check whether the distro needs extra firmware packages.
+    Reboot the tablet:
 
-## Notes
+    ```bash
+    adb reboot
+    ```
 
-Add device-specific notes here:
+    Let the tablet boot back into Android to make sure the new partition layout is still usable before continuing.
 
-- Android ROM version:
-- Linux distro:
-- Kernel build:
-- Storage method:
-- Boot method:
-- Known working features:
-- Known broken features:
+## Step 3: Install Linux
+
+Before continuing, choose a Linux distro for pipa. Some available projects include:
+
+- [postmarketOS](https://wiki.postmarketos.org/wiki/Xiaomi_Pad_6_(xiaomi-pipa)) - pmOS for pipa
+- [void-linux-pipa](https://github.com/userg0d/void-linux-pipa) - Another Void Linux for pipa
+- [pipa-alarm](https://t.me/pipa_mainline/32978) - alarm (Arch Linux ARM) for pipa
+- [armtix-xiaomi-pipa](https://github.com/Neo10e/armtix-xiaomi-pipa) - ARMtix (Artix Linux ARM) for pipa
+- [pipa-fedora-builder-43](https://github.com/rr1111/pipa-fedora-builder-43#related-projects) - Another Fedora for pipa
+
+Choose one and download it. Make sure the downloaded files include `boot.img` and `root.img`.
+
+1. Power off the tablet, then boot it into bootloader mode by holding **Volume Down + Power**.
+
+2. Make sure the tablet is detected in fastboot mode.
+
+    ```bash
+    fastboot devices
+    ```
+
+3. Flash the boot image to slot `b`.
+
+    ```bash
+    fastboot flash boot_b boot.img
+    ```
+
+4. Flash the rootfs image to the Linux partition.
+
+    ```bash
+    fastboot flash linux_partition root.img
+    ```
+
+    Replace `linux_partition` with the Linux partition name you created earlier in [Step 2](#step-2-repartition-storage), such as `linux` or another name you chose in poin `9`.
+
+5. Clear the `dtbo` partition in slot `b`.
+
+    ```bash
+    fastboot erase dtbo_b
+    ```
+
+6. Reboot the tablet out of bootloader mode.
+
+    ```bash
+    fastboot reboot
+    ```
+
+    After this, the tablet should boot into Linux.
+    Check the distro link you chose earlier for details about its desktop environment, first boot experience, and any distro-specific setup steps.
+    Distros with a desktop environment should boot straight into it after the first startup. Otherwise, you will likely land in a text console and need to continue setup from there.
+
+!!! note
+    Linux installation is now complete. Once you have confirmed that Linux boots correctly, use the Android boot instructions from [Basic idea](#basic-idea) to switch back to slot `a`.
