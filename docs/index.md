@@ -27,6 +27,7 @@ This Wiki attempts to document and gather resources related to running Linux bas
 any help with documenting is very welcome :) [github.com/rr1111/pipa-linux-wiki](https://github.com/rr1111/pipa-linux-wiki/)
 
 - rr1111 [:material-github:](https://github.com/rr1111)
+- deniganda [:material-github:](https://github.com/deniganda)
 - ...
 
 
