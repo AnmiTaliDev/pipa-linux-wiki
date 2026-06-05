@@ -287,11 +287,18 @@ Choose one and download it. Make sure the downloaded files include `boot.img` an
 
     After this, the tablet should boot into Linux.
     Check the distro link you chose earlier for details about its desktop environment, first boot experience, and any distro-specific setup steps.
-    Distros with a desktop environment should boot straight into it after the first startup. Otherwise, you will likely land in a text console and need to continue setup from there.
+    Distros with a desktop environment should boot straight into it after the first startup. Otherwise, you will likely land in a text console and need to continue setup from there.  
 
 !!! note
-    Linux installation is now complete. Once you have confirmed that Linux boots correctly, use the Android boot instructions from [Basic idea](#basic-idea) to switch back to slot `a`.
+    Linux installation is now complete. Once you have confirmed that Linux boots correctly, use the Android boot instructions from [Basic idea](#basic-idea) to switch back to slot `a`.  
 
+## Step 4: Post install maintenance  
+
+Some important Tips for keeping your dual-boot install stable.  
+
+- Disable any OTA updates on Android, as they are flashed to the slot Android sees as inactive, which is where you just installed Linux.
+- **Be careful** when using tools to manually switch Boot slots! Especially qbootctl on Linux is known to eventually brick your system. Take care and double check before switching slots or, if you want to be extra careful, only switch using fastboot.
+  
 ## References
 
 - [Fedora Linux 44 for the Xiaomi Pad 6 (pipa) - Installation guide](https://github.com/rr1111/pipa-fedora-builder-43/blob/main/INSTALL.md)
